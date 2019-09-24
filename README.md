@@ -11,7 +11,7 @@ This sample performs the following:
 
 the sample was verified with vSphere 6.7 Update 3 DotNet SDK and VSAN Datastore.
 
-TL;DR - [ViewCode](https://github.com/yanivno/vsphere-first-class-disk-csharp-example/blob/master/fcdSampleCode/Program.cs)
+TL;DR - [View Code](https://github.com/yanivno/vsphere-first-class-disk-csharp-example/blob/master/fcdSampleCode/Program.cs)
 
 ## Installation
 
