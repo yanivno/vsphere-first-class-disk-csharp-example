@@ -11,3 +11,16 @@ C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\AppUtil\bin
 C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\AppUtil\obj\Release\AppUtil.csprojResolveAssemblyReference.cache
 C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\AppUtil\obj\Release\AppUtil.dll
 C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\AppUtil\obj\Release\AppUtil.pdb
+C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\AppUtil\bin\Release\AppUtil.dll
+C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\AppUtil\bin\Release\AppUtil.pdb
+C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\AppUtil\bin\Release\AcquireBearerTokenByUserCredentialSample.dll
+C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\AppUtil\bin\Release\STSService.dll
+C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\AppUtil\bin\Release\Vim25Service.dll
+C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\AppUtil\bin\Release\VMware.Binding.WsTrust.dll
+C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\AppUtil\bin\Release\VMware.Security.CredentialStore.dll
+C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\AppUtil\bin\Release\AcquireBearerTokenByUserCredentialSample.pdb
+C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\AppUtil\bin\Release\VMware.Binding.WsTrust.pdb
+C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\AppUtil\bin\Release\VMware.Security.CredentialStore.pdb
+C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\AppUtil\obj\Release\AppUtil.csprojResolveAssemblyReference.cache
+C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\AppUtil\obj\Release\AppUtil.dll
+C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\AppUtil\obj\Release\AppUtil.pdb

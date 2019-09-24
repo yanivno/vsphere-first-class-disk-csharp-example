@@ -168,6 +168,7 @@ namespace fcdSampleCode
             foreach (VirtualDevice device in devices) {
                 if (device is VirtualSCSIController) {
                     int[] slots = Enumerable.Repeat(0, 16).ToArray(); //init array with 0, has 16 places
+                    slots[7] = 1; //SCSI reserved number.
                     VirtualSCSIController c = (VirtualSCSIController)device;
                     foreach (var deviceKey in c.device) {
                         var unitNumber = devMap[deviceKey].unitNumber;
@@ -214,6 +215,8 @@ namespace fcdSampleCode
                 ManagedObjectReference vm = p.svcUtil.getEntityByName("VirtualMachine", o.VMName);
 
                 var diskPlacement = p.GetControllerPlacement(vm);
+                Console.WriteLine("SCSI Controller=" + diskPlacement.Item1);
+                Console.WriteLine("SCSI UnitNumber=" + diskPlacement.Item2);
 
                 VStorageObject vdisk = p.GetVDiskByName(dsMoref, o.FcdName);
                 Console.WriteLine("Using vDisk id=" + vdisk.config.id.id);
