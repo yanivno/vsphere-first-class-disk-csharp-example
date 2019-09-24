@@ -1,6 +1,7 @@
 # vSphere First Class Disk in C# Sample Code
 
 Sample code for working with First Class Disks in vSphere written in C#.
+No Warranty or Support is supplied with this sample.
 
 
 ## About this sample
@@ -9,8 +10,6 @@ This sample performs the following:
 * Creates a new First Class Disk from the Snapshot (i.e. Delta Disk)
 * Mounts the new First Class Disk on an existing Virtual Machine.
 
-the sample was verified with vSphere 6.7 Update 3 DotNet SDK and VSAN Datastore.
-
 TL;DR - [View Code](https://github.com/yanivno/vsphere-first-class-disk-csharp-example/blob/master/fcdSampleCode/Program.cs)
 
 ## Installation
@@ -18,6 +17,11 @@ TL;DR - [View Code](https://github.com/yanivno/vsphere-first-class-disk-csharp-e
 No Installation is required. Just run the binary executable.
 
 [Download Latest Release](https://github.com/yanivno/vsphere-first-class-disk-csharp-example/releases/latest)
+
+Setting Up Development Environment
+* vSphere 6.7 Update 3 
+* vSphere 6.7 Update 3 DotNet SDK - [Download](https://my.vmware.com/group/vmware/get-download?downloadGroup=VS-MGMT-SDK67U3)
+* Visual Studio 2015 Community Edition
 
 ## Running
 ```shell
