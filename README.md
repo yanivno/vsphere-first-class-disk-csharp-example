@@ -19,9 +19,9 @@ No Installation is required. Just run the binary executable.
 [Download Latest Release](https://github.com/yanivno/vsphere-first-class-disk-csharp-example/releases/latest)
 
 ## Dependencies 
-* vSphere 6.7 Update 3 
+* vSphere 6.7 Update 3
 * vSphere 6.7 Update 3 DotNet SDK - [Download](https://my.vmware.com/group/vmware/get-download?downloadGroup=VS-MGMT-SDK67U3)
-* Visual Studio 2015 Community Edition
+* Visual Studio 2015 Community Edition (Or Later)
 
 ## Running
 ```shell
