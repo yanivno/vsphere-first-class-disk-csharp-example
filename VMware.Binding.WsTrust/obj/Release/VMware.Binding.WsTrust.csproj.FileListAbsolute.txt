@@ -1,0 +1,6 @@
+C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\VMware.Binding.WsTrust\bin\Release\VMware.Binding.WsTrust.dll
+C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\VMware.Binding.WsTrust\bin\Release\VMware.Binding.WsTrust.pdb
+C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\VMware.Binding.WsTrust\bin\Release\STSService.dll
+C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\VMware.Binding.WsTrust\bin\Release\Vim25Service.dll
+C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\VMware.Binding.WsTrust\obj\Release\VMware.Binding.WsTrust.dll
+C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\VMware.Binding.WsTrust\obj\Release\VMware.Binding.WsTrust.pdb

@@ -1,0 +1,25 @@
+C:\Users\ynorman\Downloads\VMware-vSphere-SDK-6.7.0-14379537\SDK\vsphere-ws\dotnet\cs\samples\AppUtil\bin\Debug\AppUtil.dll
+C:\Users\ynorman\Downloads\VMware-vSphere-SDK-6.7.0-14379537\SDK\vsphere-ws\dotnet\cs\samples\AppUtil\bin\Debug\AppUtil.pdb
+C:\Users\ynorman\Downloads\VMware-vSphere-SDK-6.7.0-14379537\SDK\vsphere-ws\dotnet\cs\samples\AppUtil\bin\Debug\AcquireBearerTokenByUserCredentialSample.exe
+C:\Users\ynorman\Downloads\VMware-vSphere-SDK-6.7.0-14379537\SDK\vsphere-ws\dotnet\cs\samples\AppUtil\bin\Debug\STSService.dll
+C:\Users\ynorman\Downloads\VMware-vSphere-SDK-6.7.0-14379537\SDK\vsphere-ws\dotnet\cs\samples\AppUtil\bin\Debug\Vim25Service.dll
+C:\Users\ynorman\Downloads\VMware-vSphere-SDK-6.7.0-14379537\SDK\vsphere-ws\dotnet\cs\samples\AppUtil\bin\Debug\VMware.Binding.WsTrust.dll
+C:\Users\ynorman\Downloads\VMware-vSphere-SDK-6.7.0-14379537\SDK\vsphere-ws\dotnet\cs\samples\AppUtil\bin\Debug\VMware.Security.CredentialStore.dll
+C:\Users\ynorman\Downloads\VMware-vSphere-SDK-6.7.0-14379537\SDK\vsphere-ws\dotnet\cs\samples\AppUtil\bin\Debug\AcquireBearerTokenByUserCredentialSample.pdb
+C:\Users\ynorman\Downloads\VMware-vSphere-SDK-6.7.0-14379537\SDK\vsphere-ws\dotnet\cs\samples\AppUtil\bin\Debug\VMware.Binding.WsTrust.pdb
+C:\Users\ynorman\Downloads\VMware-vSphere-SDK-6.7.0-14379537\SDK\vsphere-ws\dotnet\cs\samples\AppUtil\bin\Debug\VMware.Security.CredentialStore.pdb
+C:\Users\ynorman\Downloads\VMware-vSphere-SDK-6.7.0-14379537\SDK\vsphere-ws\dotnet\cs\samples\AppUtil\obj\Debug\AppUtil.csprojResolveAssemblyReference.cache
+C:\Users\ynorman\Downloads\VMware-vSphere-SDK-6.7.0-14379537\SDK\vsphere-ws\dotnet\cs\samples\AppUtil\obj\Debug\AppUtil.dll
+C:\Users\ynorman\Downloads\VMware-vSphere-SDK-6.7.0-14379537\SDK\vsphere-ws\dotnet\cs\samples\AppUtil\obj\Debug\AppUtil.pdb
+C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\AppUtil\bin\Debug\AppUtil.dll
+C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\AppUtil\bin\Debug\AppUtil.pdb
+C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\AppUtil\bin\Debug\AcquireBearerTokenByUserCredentialSample.dll
+C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\AppUtil\bin\Debug\Vim25Service.dll
+C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\AppUtil\bin\Debug\VMware.Binding.WsTrust.dll
+C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\AppUtil\bin\Debug\VMware.Security.CredentialStore.dll
+C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\AppUtil\bin\Debug\AcquireBearerTokenByUserCredentialSample.pdb
+C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\AppUtil\bin\Debug\VMware.Binding.WsTrust.pdb
+C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\AppUtil\bin\Debug\VMware.Security.CredentialStore.pdb
+C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\AppUtil\obj\Debug\AppUtil.csprojResolveAssemblyReference.cache
+C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\AppUtil\obj\Debug\AppUtil.dll
+C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\AppUtil\obj\Debug\AppUtil.pdb

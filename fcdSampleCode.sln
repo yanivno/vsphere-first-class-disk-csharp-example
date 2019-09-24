@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fcdSampleCode", "fcdSampleCode\fcdSampleCode.csproj", "{5E01160B-32EF-4E31-8D33-FDE2FC383439}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcquireBearerTokenByUserCredentialSample", "AcquireBearerTokenByUserCredentialSample\AcquireBearerTokenByUserCredentialSample.csproj", "{B525CA49-2783-4DA7-B101-9EFCD260F11C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppUtil", "AppUtil\AppUtil.csproj", "{819ADE36-46B4-4DCB-98EE-8E0368EDBB40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VMware.Binding.WsTrust", "VMware.Binding.WsTrust\VMware.Binding.WsTrust.csproj", "{0E27ECE7-6CC4-4041-8606-600DE853AF64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VMware.Security.CredentialStore", "VMware.Security.CredentialStore\VMware.Security.CredentialStore.csproj", "{C8393222-44A8-48A8-A7C1-94B7C44A19E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E01160B-32EF-4E31-8D33-FDE2FC383439}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E01160B-32EF-4E31-8D33-FDE2FC383439}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E01160B-32EF-4E31-8D33-FDE2FC383439}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E01160B-32EF-4E31-8D33-FDE2FC383439}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B525CA49-2783-4DA7-B101-9EFCD260F11C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B525CA49-2783-4DA7-B101-9EFCD260F11C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B525CA49-2783-4DA7-B101-9EFCD260F11C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B525CA49-2783-4DA7-B101-9EFCD260F11C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{819ADE36-46B4-4DCB-98EE-8E0368EDBB40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{819ADE36-46B4-4DCB-98EE-8E0368EDBB40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{819ADE36-46B4-4DCB-98EE-8E0368EDBB40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{819ADE36-46B4-4DCB-98EE-8E0368EDBB40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E27ECE7-6CC4-4041-8606-600DE853AF64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E27ECE7-6CC4-4041-8606-600DE853AF64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E27ECE7-6CC4-4041-8606-600DE853AF64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E27ECE7-6CC4-4041-8606-600DE853AF64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E27ECE7-6CC4-4041-8606-600DE853AF64}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C8393222-44A8-48A8-A7C1-94B7C44A19E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8393222-44A8-48A8-A7C1-94B7C44A19E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8393222-44A8-48A8-A7C1-94B7C44A19E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8393222-44A8-48A8-A7C1-94B7C44A19E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

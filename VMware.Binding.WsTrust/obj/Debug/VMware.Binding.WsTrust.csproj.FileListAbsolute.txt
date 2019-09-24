@@ -1,0 +1,12 @@
+C:\Users\ynorman\Downloads\VMware-vSphere-SDK-6.7.0-14379537\SDK\vsphere-ws\dotnet\cs\samples\VMware.Binding.WsTrust\bin\Debug\VMware.Binding.WsTrust.dll
+C:\Users\ynorman\Downloads\VMware-vSphere-SDK-6.7.0-14379537\SDK\vsphere-ws\dotnet\cs\samples\VMware.Binding.WsTrust\bin\Debug\VMware.Binding.WsTrust.pdb
+C:\Users\ynorman\Downloads\VMware-vSphere-SDK-6.7.0-14379537\SDK\vsphere-ws\dotnet\cs\samples\VMware.Binding.WsTrust\bin\Debug\STSService.dll
+C:\Users\ynorman\Downloads\VMware-vSphere-SDK-6.7.0-14379537\SDK\vsphere-ws\dotnet\cs\samples\VMware.Binding.WsTrust\bin\Debug\Vim25Service.dll
+C:\Users\ynorman\Downloads\VMware-vSphere-SDK-6.7.0-14379537\SDK\vsphere-ws\dotnet\cs\samples\VMware.Binding.WsTrust\obj\Debug\VMware.Binding.WsTrust.csprojResolveAssemblyReference.cache
+C:\Users\ynorman\Downloads\VMware-vSphere-SDK-6.7.0-14379537\SDK\vsphere-ws\dotnet\cs\samples\VMware.Binding.WsTrust\obj\Debug\VMware.Binding.WsTrust.dll
+C:\Users\ynorman\Downloads\VMware-vSphere-SDK-6.7.0-14379537\SDK\vsphere-ws\dotnet\cs\samples\VMware.Binding.WsTrust\obj\Debug\VMware.Binding.WsTrust.pdb
+C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\VMware.Binding.WsTrust\bin\Debug\VMware.Binding.WsTrust.dll
+C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\VMware.Binding.WsTrust\bin\Debug\VMware.Binding.WsTrust.pdb
+C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\VMware.Binding.WsTrust\bin\Debug\Vim25Service.dll
+C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\VMware.Binding.WsTrust\obj\Debug\VMware.Binding.WsTrust.dll
+C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\VMware.Binding.WsTrust\obj\Debug\VMware.Binding.WsTrust.pdb
