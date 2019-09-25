@@ -25,8 +25,8 @@ No Installation is required. Just run the binary executable.
 
 ## Running
 ```shell
-fcdSampleCode 1.0.0.0
-Copyright c  2019
+fcdSampleCode 1.0.2.0
+Copyright Yaniv Norman c  2019
 
   -s, --server       Required. vCenter SDK Url in https://<vcenter>/sdk
 
@@ -46,6 +46,7 @@ Copyright c  2019
 
   --version          Display version information.
 
+Press Enter to continue...
 ```
 
 Sample Command
@@ -55,9 +56,16 @@ fcdSampleCode.exe -s "https://yaniv-vcsa-01a.pso-il.local/sdk" -u "administrator
 
 Example Output
 ```shell
-[ 9/24/2019 10:27:29 PM ] Begin Log.
+[ 9/25/2019 1:54:05 PM ] Begin Log.
+Finding Datastore with name=vsanDatastore
+Found Datastore with Moref=datastore-16
+Finding VM with name=centos
+Found VM with Moref=vm-27
+Finding a SCSI Placement for new disk
 SCSI Controller=1000
-SCSI UnitNumber=8
+SCSI UnitNumber=10
+Reconcile the datastore inventory info of virtual storage objects...
+Finding VDisk with name=yaniv_test
 found disk = 167d6f3b-a74d-4e47-b2fd-30734a2f4180
 found disk = 2ed4aa94-1bdd-4b02-93b9-4aee70003dd9
 found disk = 3f5ff6d7-a03a-498c-a123-99c942d94cc9
@@ -69,13 +77,13 @@ found disk = c1f16716-dc17-43ba-b4e8-a31296e6329f
 found disk = d41c3312-dc75-46ab-9549-86a1d4702fd5
 Using vDisk id=167d6f3b-a74d-4e47-b2fd-30734a2f4180
 Using vDisk Name=yaniv_test
-going to create snapshot with name=snap-prefix-0b64e0fd-3a7d-4714-ac38-a23ab4f0ca5c
-created snapshot with id=5e06af01-d9cf-4fef-a810-c142ee7cc471
-Creating a new vDisk with name=yaniv_test_5e06af01-d9cf-4fef-a810-c142ee7cc471
-created a new  vDisk with id=6accdcc4-4823-496f-b512-c8396fa587d2
-created a new vDisk in path=[vsanDatastore] 4517895d-9ca7-8a60-f341-005056bfe40a/98c37affccac462ea6a2588391e8b412.vmdk
+going to create snapshot with name=snap-prefix-0f283baa-c274-4999-a8cb-d3aa34bb7c3a
+created snapshot with id=16bbb814-0ad9-4987-b0f6-5ad11cb54d43
+Creating a new vDisk with name=yaniv_test_16bbb814-0ad9-4987-b0f6-5ad11cb54d43
+Created a new  vDisk with id=9176a2fc-d028-4806-9df8-ef7aaaf2ad2b
+Created a new vDisk in path=[vSanDatastore] 4517895d-9ca7-8a60-f341-005056bfe40a/adb48e9f658b4db49e01c240fb1461d9.vmdk
 Attaching new vDisk to VM=vm-27
 Attached disk to vm in SCSI Controller=1000
-Attached disk to vm in SCSI UnitNumber=8
+Attached disk to vm in SCSI UnitNumber=10
 Press Enter to continue...
 ```
