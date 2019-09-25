@@ -14,22 +14,6 @@ namespace fcdSampleCode
     {
         private static string CONN_TYPE = "ServiceInstance";
 
-        private static string VC_URL = "https://yaniv-vcsa-01a.pso-il.local/sdk";
-        private static string VC_USERNAME = "administrator@vsphere.local";
-        private static string VC_PASSWORD = "VMware1!";
-        private static string VC_DATASTORE_NAME = "vsanDatastore";
-
-        //create disk properties
-        private static string VC_VDISK_NAME = "yaniv_test";
-        private static long VC_VDISK_SIZE = 1024;
-        private static string VC_PROVISIONING_TYPE = "thin";
-
-        //vdisk link clone
-        private static string VC_VDISK_SNAPSHOT_PREFIX = "base-snapshot-";
-
-        //general
-        private static string VC_VM_NAME = "centos";
-
         private string username;
         private string password;
         private string url;
@@ -54,6 +38,19 @@ namespace fcdSampleCode
             svcUtil.Init(appUtil);
         }
 
+        public Tuple<TaskInfoState, TaskInfo> WaitForTask(ManagedObjectReference taskMoref)
+        {
+            var taskResult = svcUtil.WaitForValues(taskMoref,
+                new string[] { "info.state", "info.result" },
+                new string[] { "state" },
+                new object[][] { new object[] { TaskInfoState.success, TaskInfoState.error } });
+
+            ObjectContent[] objTaskInfo = svcUtil.GetObjectProperties(svcConn._sic.propertyCollector, taskMoref, new String[] { "info" });
+            TaskInfo tInfo = (TaskInfo)objTaskInfo[0].propSet[0].val;
+            TaskInfoState taskState = (TaskInfoState)taskResult[0];
+            return new Tuple<TaskInfoState,TaskInfo>(taskState,tInfo);
+        }
+
         public VStorageObject CreateNewVDisk(ManagedObjectReference dsMoref, string name, bool keepAfterDelete, string provisioningType, long sizeInMB )
         {
             ManagedObjectReference vStorageMgr = svcConn.ServiceContent.vStorageObjectManager;
@@ -67,22 +64,26 @@ namespace fcdSampleCode
             spec.capacityInMB = sizeInMB;
             var task = svcConn._service.CreateDisk_Task(vStorageMgr, spec);
 
-            var newDiskTaskResult = svcUtil.WaitForValues(task,
-                new string[] { "info.state", "info.result" },
-                new string[] { "state" }, // info has a property - state for state of the task
-                new object[][] { new object[] { TaskInfoState.success, TaskInfoState.error } });
-
-            if (newDiskTaskResult[0].Equals(TaskInfoState.success))
-            {
-                ObjectContent[] objTaskInfo = svcUtil.GetObjectProperties(svcConn._sic.propertyCollector, task, new String[] { "info" });
-                TaskInfo tInfo = (TaskInfo)objTaskInfo[0].propSet[0].val; ;
-                VStorageObject newDisk = (VStorageObject)tInfo.result;
+            var taskResult = WaitForTask(task);
+            if (taskResult.Item1.Equals(TaskInfoState.success)) {
+                VStorageObject newDisk = (VStorageObject)taskResult.Item2.result;
                 return newDisk;
-            } else
-            {
-                throw new Exception("task failed on vCenter Server");
+            } else {
+                throw new Exception(taskResult.Item2.error.localizedMessage);
             }
         }
+
+    
+        public void ReconcileDatastoreInventory(ManagedObjectReference dsMoref)
+        {
+            ManagedObjectReference vStorageMgr = svcConn.ServiceContent.vStorageObjectManager;
+            ManagedObjectReference task = svcConn._service.ReconcileDatastoreInventory_Task(vStorageMgr, dsMoref);
+            var taskResult = WaitForTask(task);
+            if (taskResult.Item1.Equals(TaskInfoState.error)) {
+                throw new Exception(taskResult.Item2.error.localizedMessage);
+            }
+        }
+
 
         public VStorageObject GetVDiskByName(ManagedObjectReference dsMoref, string vdiskName )
         {
@@ -112,19 +113,12 @@ namespace fcdSampleCode
         {
             ManagedObjectReference vStorageMgr = svcConn.ServiceContent.vStorageObjectManager;
             ManagedObjectReference task = svcConn._service.VStorageObjectCreateSnapshot_Task(vStorageMgr, vDiskId, dsMoref, snapshotDescription);
-            var newDiskTaskResult = svcUtil.WaitForValues(task,
-                new string[] { "info.state", "info.result" },
-                new string[] { "state" }, 
-                new object[][] { new object[] { TaskInfoState.success, TaskInfoState.error } });
 
-            ObjectContent[] objTaskInfo = svcUtil.GetObjectProperties(svcConn._sic.propertyCollector, task, new String[] { "info" });
-            TaskInfo tInfo = (TaskInfo)objTaskInfo[0].propSet[0].val;
-
-            if (newDiskTaskResult[0].Equals(TaskInfoState.error))
-                throw new Exception(tInfo.error.localizedMessage);
-            else
-            {
-                ID newSnapshot = (ID)tInfo.result;
+            var taskResult = WaitForTask(task);
+            if (taskResult.Item1.Equals(TaskInfoState.error))
+                throw new Exception(taskResult.Item2.error.localizedMessage);
+            else {
+                ID newSnapshot = (ID)taskResult.Item2.result;
                 return newSnapshot;
             }
         }
@@ -138,19 +132,12 @@ namespace fcdSampleCode
 
             CreateDiskFromSnapshot_TaskRequest req = new CreateDiskFromSnapshot_TaskRequest(vStorageManager, vdiskId, dsMoref, snapshotId, newDiskName, profile, crypto, path);
             var task = svcConn._service.CreateDiskFromSnapshot_Task(req).returnval;
-            var newDiskTaskResult = svcUtil.WaitForValues(task,
-                new string[] { "info.state", "info.result" },
-                new string[] { "state" },
-                new object[][] { new object[] { TaskInfoState.success, TaskInfoState.error } });
+            var taskResult = WaitForTask(task);
 
-
-            ObjectContent[] objTaskInfo = svcUtil.GetObjectProperties(svcConn._sic.propertyCollector, task, new String[] { "info" });
-            TaskInfo tInfo = (TaskInfo)objTaskInfo[0].propSet[0].val;
-
-            if (newDiskTaskResult[0].Equals(TaskInfoState.error))
-                throw new Exception(tInfo.error.localizedMessage);
+            if (taskResult.Item1.Equals(TaskInfoState.error))
+                throw new Exception(taskResult.Item2.error.localizedMessage);
             else {
-                VStorageObject newVdisk = (VStorageObject)tInfo.result;
+                VStorageObject newVdisk = (VStorageObject)taskResult.Item2.result;
                 return newVdisk;
             }
         }
@@ -182,23 +169,16 @@ namespace fcdSampleCode
                 }
             }
 
-            throw new Exception("Could not find a SCSI Controller in VM");
+            throw new Exception("Could not find a free SCSI Controller slot in VM");
         }
 
         public void AttachDiskToVm(ManagedObjectReference vm, ID diskId, ManagedObjectReference ds, int controllerKey, int unitNumber)
         {
             ManagedObjectReference task = svcConn._service.AttachDisk_Task(vm, diskId, ds, controllerKey, unitNumber);
-            var newDiskTaskResult = svcUtil.WaitForValues(task,
-                new string[] { "info.state", "info.result" },
-                new string[] { "state" },
-                new object[][] { new object[] { TaskInfoState.success, TaskInfoState.error } });
+            var taskResult = WaitForTask(task);
 
-            ObjectContent[] objTaskInfo = svcUtil.GetObjectProperties(svcConn._sic.propertyCollector, task, new String[] { "info" });
-            TaskInfo tInfo = (TaskInfo)objTaskInfo[0].propSet[0].val;
-               
-            if (newDiskTaskResult[0].Equals(TaskInfoState.error))
-                throw new Exception(tInfo.error.localizedMessage);
-
+            if (taskResult.Item1.Equals(TaskInfoState.error))
+                throw new Exception(taskResult.Item2.error.localizedMessage);
         }
 
         static void Main(string[] args)
@@ -211,34 +191,39 @@ namespace fcdSampleCode
             {
                 Program p = new Program(o.Server, o.Username, o.Password);
 
+                Console.WriteLine("Finding Datastore with name=" + o.Datastore);
                 ManagedObjectReference dsMoref = p.svcUtil.getEntityByName("Datastore", o.Datastore);
-                Console.WriteLine("found Datastore with Moref=" + dsMoref.Value);
+                Console.WriteLine("Found Datastore with Moref=" + dsMoref.Value);
 
+                Console.WriteLine("Finding VM with name=" + o.VMName);
                 ManagedObjectReference vm = p.svcUtil.getEntityByName("VirtualMachine", o.VMName);
                 Console.WriteLine("Found VM with Moref=" + vm.Value);
 
+                Console.WriteLine("Finding a SCSI Placement for new disk");
                 var diskPlacement = p.GetControllerPlacement(vm);
                 Console.WriteLine("SCSI Controller=" + diskPlacement.Item1);
                 Console.WriteLine("SCSI UnitNumber=" + diskPlacement.Item2);
 
+                Console.WriteLine("Reconcile the datastore inventory info of virtual storage objects...");
+                p.ReconcileDatastoreInventory(dsMoref); //in case files were deleted without vStorageManager is aware.
+
+                Console.WriteLine("Finding VDisk with name=" + o.FcdName);
                 VStorageObject vdisk = p.GetVDiskByName(dsMoref, o.FcdName);
                 Console.WriteLine("Using vDisk id=" + vdisk.config.id.id);
                 Console.WriteLine("Using vDisk Name=" + vdisk.config.name);
 
                 string snapshotName = o.SnapshotNamePrefix + Guid.NewGuid();
                 Console.WriteLine("going to create snapshot with name=" + snapshotName);
-
                 ID snapshotId = p.CreateVDiskSnapshot(dsMoref, vdisk.config.id, snapshotName);
                 Console.WriteLine("created snapshot with id=" + snapshotId.id);
 
                 string newDiskName = o.FcdName + "_" + snapshotId.id;
                 Console.WriteLine("Creating a new vDisk with name=" + newDiskName);
-
                 VStorageObject newDisk = p.CreateDiskFromSnapshot(dsMoref, vdisk.config.id, snapshotId, newDiskName);
-                Console.WriteLine("created a new  vDisk with id=" + newDisk.config.id.id);
+                Console.WriteLine("Created a new  vDisk with id=" + newDisk.config.id.id);
 
                 string vmdkPath = ((BaseConfigInfoDiskFileBackingInfo)newDisk.config.backing).filePath;
-                Console.WriteLine("created a new vDisk in path=" + vmdkPath);
+                Console.WriteLine("Created a new vDisk in path=" + vmdkPath);
 
                 Console.WriteLine("Attaching new vDisk to VM=" + vm.Value);
                 p.AttachDiskToVm(vm, newDisk.config.id, dsMoref, diskPlacement.Item1, diskPlacement.Item2);

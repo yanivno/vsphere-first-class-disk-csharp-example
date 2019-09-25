@@ -10,3 +10,10 @@ C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\VMware.Bind
 C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\VMware.Binding.WsTrust\bin\Debug\Vim25Service.dll
 C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\VMware.Binding.WsTrust\obj\Debug\VMware.Binding.WsTrust.dll
 C:\Users\ynorman\Documents\Visual Studio 2015\Projects\fcdSampleCode\VMware.Binding.WsTrust\obj\Debug\VMware.Binding.WsTrust.pdb
+C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\VMware.Binding.WsTrust\bin\Debug\VMware.Binding.WsTrust.dll
+C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\VMware.Binding.WsTrust\bin\Debug\VMware.Binding.WsTrust.pdb
+C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\VMware.Binding.WsTrust\bin\Debug\STSService.dll
+C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\VMware.Binding.WsTrust\bin\Debug\Vim25Service.dll
+C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\VMware.Binding.WsTrust\obj\Debug\VMware.Binding.WsTrust.csprojResolveAssemblyReference.cache
+C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\VMware.Binding.WsTrust\obj\Debug\VMware.Binding.WsTrust.dll
+C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\VMware.Binding.WsTrust\obj\Debug\VMware.Binding.WsTrust.pdb

@@ -17,8 +17,6 @@ c:\users\ynorman\documents\visual studio 2015\Projects\fcdSampleCode\fcdSampleCo
 c:\users\ynorman\documents\visual studio 2015\Projects\fcdSampleCode\fcdSampleCode\obj\Debug\fcdSampleCode.exe
 c:\users\ynorman\documents\visual studio 2015\Projects\fcdSampleCode\fcdSampleCode\obj\Debug\fcdSampleCode.pdb
 C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\fcdSampleCode\bin\Debug\fcdSampleCode.exe.config
-C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\fcdSampleCode\obj\Debug\fcdSampleCode.exe
-C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\fcdSampleCode\obj\Debug\fcdSampleCode.pdb
 C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\fcdSampleCode\bin\Debug\fcdSampleCode.exe
 C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\fcdSampleCode\bin\Debug\fcdSampleCode.pdb
 C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\fcdSampleCode\bin\Debug\AppUtil.dll
@@ -34,3 +32,5 @@ C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\fcdSampleC
 C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\fcdSampleCode\bin\Debug\AcquireBearerTokenByUserCredentialSample.pdb
 C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\fcdSampleCode\bin\Debug\VMware.Binding.WsTrust.pdb
 C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\fcdSampleCode\obj\Debug\fcdSampleCode.csprojResolveAssemblyReference.cache
+C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\fcdSampleCode\obj\Debug\fcdSampleCode.exe
+C:\Users\ynorman\Documents\Visual Studio 20151\Projects\fcdSampleCode\fcdSampleCode\obj\Debug\fcdSampleCode.pdb
