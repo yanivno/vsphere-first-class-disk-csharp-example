@@ -212,7 +212,10 @@ namespace fcdSampleCode
                 Program p = new Program(o.Server, o.Username, o.Password);
 
                 ManagedObjectReference dsMoref = p.svcUtil.getEntityByName("Datastore", o.Datastore);
+                Console.WriteLine("found Datastore with Moref=" + dsMoref.Value);
+
                 ManagedObjectReference vm = p.svcUtil.getEntityByName("VirtualMachine", o.VMName);
+                Console.WriteLine("Found VM with Moref=" + vm.Value);
 
                 var diskPlacement = p.GetControllerPlacement(vm);
                 Console.WriteLine("SCSI Controller=" + diskPlacement.Item1);
